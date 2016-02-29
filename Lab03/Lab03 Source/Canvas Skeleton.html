@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>Canvas tutorial template</title>
+	<script type="text/javascript">
+		function draw(){
+			var ctx = document.getElementById('canvas').getContext('2d');
+			var canvasWidth = document.getElementById('canvas').width;
+			var canvasHeight = document.getElementById('canvas').height;
+			var time = new Date();
+			var cyan = '#00FFFF';
+			var magenta = "#FF00FF";
+			var yellow = "#FFFF00";
+			var white = "#FFF";
+
+			ctx.fillStyle = white;
+			ctx.fillRect(0,0,canvasWidth, canvasHeight);
+			
+			ctx.save();
+
+			var lingrad = ctx.createLinearGradient(0,0,0,225);
+			lingrad.addColorStop(0, cyan);
+			lingrad.addColorStop(1, magenta);
+
+			ctx.translate(25, 25);
+
+			ctx.fillStyle = lingrad;
+			ctx.fillRect(0, 0, 250, 250);
+
+			ctx.restore();
+			ctx.save();
+
+			var rectWidth = 200;
+			var rectDiameter = Math.sqrt(Math.pow(rectWidth,2)+ Math.pow(rectWidth,2));
+			var lingrad = ctx.createLinearGradient(0, 0,rectWidth,rectWidth);
+			lingrad.addColorStop(1, cyan);
+			lingrad.addColorStop(0, magenta);
+			ctx.fillStyle = lingrad;
+
+			ctx.translate(canvasWidth*0.5, (canvasHeight - rectDiameter)*0.5);
+			ctx.rotate( Math.PI / 4 );
+
+			// ctx.rotate(time.getMilliseconds()*0.36*Math.PI/180);
+			ctx.fillRect(0, 0, rectWidth, rectWidth);
+			
+			ctx.restore();
+		}
+		
+
+	</script>
+	<style type="text/css">
+		canvas { 
+			border: 1px solid black; 
+			display:block;
+			margin:auto;
+			margin-top:50px;
+			border-radius:10px;
+		}
+	</style>
+</head>
+
+<body onload="draw();">
+	<canvas id="canvas" width="300" height="300"></canvas>
+</body>
+
+</html>
