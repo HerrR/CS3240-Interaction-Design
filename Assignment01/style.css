@@ -71,8 +71,6 @@ ul#mainMenu li.socialMedia:nth-child(2){
 	left:60px;
 }
 
-
-
 .content {
 	margin-top: 80px;
 }
@@ -92,12 +90,11 @@ ul#mainMenu li.socialMedia:nth-child(2){
 
 #profilePicture {
     text-align: center;
-    margin-bottom:-40px;
 }
 
 #profilePicture > img {
 	border-radius: 100%;
-    width: 50%;
+    width: 60%;
     margin-top: 50px;
     -webkit-box-shadow: 0px 5px 30px -9px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 5px 30px -9px rgba(0,0,0,0.75);
@@ -117,8 +114,6 @@ ul#mainMenu li a{
 ul#mainMenu li.socialMedia a img {
 	height:30px;
 }
-
-
 
 #logo {
 	position:absolute;
@@ -214,7 +209,7 @@ hr {
 	margin-bottom:50px;
 }
 
-#inputFields div input {
+#inputFields div {
 	margin:7.5px 0px;
 }
 
@@ -233,12 +228,8 @@ hr {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
-
 	.header {
-		/*background-image: url(img/header-background.jpg);*/
 		background-image: url(img/space.jpg);
-		/*background-image: url(img/space-hi-def.jpg);*/
 		min-height:250px;
 		position: relative;
 		background-size:cover;

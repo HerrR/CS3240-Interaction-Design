@@ -23,7 +23,7 @@ $(document).ready(function(){
 	);
 
 	// Clicking the menu items scrolls to their corresponding sections on the page
-	$("#mainMenu li a").click(function(){
+	$("#mainMenu li.menuItem a").click(function(){
 		var clicked = $(this).html().split(" ")[0].toLowerCase();
 		$('html,body').animate({scrollTop: $("#"+clicked).offset().top - 100},'slow');
 		toggleMenu('open');
